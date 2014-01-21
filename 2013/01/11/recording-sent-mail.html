@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>modsognir</title>
+  
+  <script type="text/javascript" src="http://use.typekit.net/nkw7hwr.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="/stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="/stylesheets/app.css">
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  <header id='title'>
+    <div class="row">
+      <div id="logo"><h1><a href="http://jsf.io/">Jared Fraser</a></h1></div>
+      <nav class="five columns">
+        <ul>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  
+  <div class="row">
+  <div class="post ten columns offset-by-one">
+    <div id="page-title"><h2>Recording Sent Mail with Observers</h2></div>
+
+    <p class="datestamp">
+      <span>11 Jan 2013</span>
+    </p>
+    <div class="content">
+      <p>I’ve had scenarios before where the users of an application want access to mail sent out through the application. Fortunately, it’s easy to craft an Observer to store a quick copy of the mail object.</p>
+<script src='https://gist.github.com/628f5fcf67c411178309.js'><![CDATA[ ]]></script>
+<p>A few notes:</p>
+
+<ul>
+<li>It’s possible to just serialise the <code>message</code> object directly. Storing the attributes makes it easier to query the <code>Email</code> object.</li>
+
+<li>Most of the fields on <code>message</code> (eg. <code>message.from</code>) act or display like arrays or strings, but are actually instances of classes like <code>Mail::AddressContainer</code>. They’ll respond to most array or string commands.</li>
+
+<li>In multipart emails, <code>message.body</code> will not be sufficient to retreive the body. You might need to use <code>message.html_part</code> and <code>message.text_part</code>. <code>message.parts</code> will retrieve all parts (including eg. attachments), and is an instance of <code>Mail::PartsList</code>. It behaves like an array.</li>
+</ul>
+    </div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'jsf-io'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+  </div>
+</div>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37352722-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>

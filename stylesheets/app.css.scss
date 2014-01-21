@@ -1,0 +1,139 @@
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+body {
+  font-family: 'Adelle', sans-serif !important;
+
+  header#title {
+    width: 100%;
+    color: #f5f5f5;
+    background-color: #550000;
+
+    -webkit-box-shadow: rgba(0,0,0,0.3) 0px 2px 2px -1px;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0px 2px 2px -1px;
+    box-shadow: rgba(0,0,0,0.3) 0px 2px 2px -1px;
+
+    h1, h2 {
+      font-family: 'Adelle', sans-serif;
+      margin: 0px;
+      padding: 8px;
+      font-size: 40px;
+      a {
+        color: #aa4444;
+      }
+    }
+
+
+    #logo { 
+      float: left;
+      h1 {
+        color: #f5f5f5;
+        text-align: center;
+      }
+      width: 450px;
+    }
+
+    nav {
+      margin-left: 15px;
+
+      ul {
+        list-style: none;
+        float: right;
+        margin-top: 18px;
+        li {
+          display: inline-block;
+          margin-right: 28px;
+          a {
+            font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+            font-weight: 600;
+
+            color: #cc9999;
+          }
+        }
+      }
+    }
+  }
+
+  header.article {
+    margin-top: 35px;
+    h1 {
+      font-family: 'Adelle', sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      text-transform: uppercase;
+    }
+
+    text-align: center;
+  }
+
+  p.datestamp {
+    margin-top: 0px;
+  }
+
+  #page-title {
+    h2 {
+      font-family: 'Adelle', sans-serif;
+      font-size: 28px;
+      margin-bottom: 8px;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+  }
+
+  div.content {
+    h1, h2, h3, h4 {
+      font-family: 'Adelle', sans-serif;
+      font-weight: 200;
+      font-size: 26px;
+      margin-top: 36px;
+    }
+    p, li { font-size: 17px; }
+    code {
+      padding: 2px 4px;
+      white-space: nowrap;
+      background-color: #F7F7F9;
+      border: 1px solid #E1E1E8;
+    }
+    table.lines { 
+      margin-bottom: 0px;
+      border-radius: 0px;
+      border: none;
+      background-color: #f7f7f9 !important ;
+    }
+  }
+
+  .posts {
+    margin-bottom: 30px;
+    margin-left: 0px;
+    h1, h2, h3, h4 {
+      font-family: 'Adelle', sans-serif;
+      font-weight: 200;
+      font-size: 26px;
+      margin-top: 36px;
+    }
+    h3 {
+      font-weight: 200;
+      font-size: 22px;
+    }
+    p.date {
+      font-size: 18px;
+      color: #666;
+      margin-top: 5px;
+    }
+    p { font-size: 17px;}
+  }
+
+  #disqus_thread {
+    margin-top: 50px;
+  }
+}

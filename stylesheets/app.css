@@ -1,0 +1,97 @@
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+body {
+  font-family: 'Adelle', sans-serif !important; }
+  body header#title {
+    width: 100%;
+    color: #f5f5f5;
+    background-color: #550000;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px -1px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px -1px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px -1px; }
+    body header#title h1, body header#title h2 {
+      font-family: 'Adelle', sans-serif;
+      margin: 0px;
+      padding: 8px;
+      font-size: 40px; }
+      body header#title h1 a, body header#title h2 a {
+        color: #aa4444; }
+    body header#title #logo {
+      float: left;
+      width: 450px; }
+      body header#title #logo h1 {
+        color: #f5f5f5;
+        text-align: center; }
+    body header#title nav {
+      margin-left: 15px; }
+      body header#title nav ul {
+        list-style: none;
+        float: right;
+        margin-top: 18px; }
+        body header#title nav ul li {
+          display: inline-block;
+          margin-right: 28px; }
+          body header#title nav ul li a {
+            font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+            font-weight: 600;
+            color: #cc9999; }
+  body header.article {
+    margin-top: 35px;
+    text-align: center; }
+    body header.article h1 {
+      font-family: 'Adelle', sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      text-transform: uppercase; }
+  body p.datestamp {
+    margin-top: 0px; }
+  body #page-title h2 {
+    font-family: 'Adelle', sans-serif;
+    font-size: 28px;
+    margin-bottom: 8px;
+    margin-top: 30px;
+    font-weight: bold; }
+  body div.content h1, body div.content h2, body div.content h3, body div.content h4 {
+    font-family: 'Adelle', sans-serif;
+    font-weight: 200;
+    font-size: 26px;
+    margin-top: 36px; }
+  body div.content p, body div.content li {
+    font-size: 17px; }
+  body div.content code {
+    padding: 2px 4px;
+    white-space: nowrap;
+    background-color: #F7F7F9;
+    border: 1px solid #E1E1E8; }
+  body div.content table.lines {
+    margin-bottom: 0px;
+    border-radius: 0px;
+    border: none;
+    background-color: #f7f7f9 !important; }
+  body .posts {
+    margin-bottom: 30px;
+    margin-left: 0px; }
+    body .posts h1, body .posts h2, body .posts h3, body .posts h4 {
+      font-family: 'Adelle', sans-serif;
+      font-weight: 200;
+      font-size: 26px;
+      margin-top: 36px; }
+    body .posts h3 {
+      font-weight: 200;
+      font-size: 22px; }
+    body .posts p.date {
+      font-size: 18px;
+      color: #666;
+      margin-top: 5px; }
+    body .posts p {
+      font-size: 17px; }
+  body #disqus_thread {
+    margin-top: 50px; }

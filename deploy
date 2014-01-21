@@ -1,0 +1,1 @@
+jekyll build -d ../modsognir.github.io && cd ../modsognir.github.io && git add . && git commit -m "New content" && git push origin master && cd ../blog

@@ -1,0 +1,1 @@
+jekyll build && cp config.ru _site/ && cd _site && rackup
