@@ -12,14 +12,13 @@
   <meta name="viewport" content="width=device-width" />
 
   <title>modsognir</title>
-  
-  <script type="text/javascript" src="http://use.typekit.net/nkw7hwr.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,300italic,400italic,500italic' rel='stylesheet' type='text/css'>
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
-  
+
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="/stylesheets/foundation.min.css">
   <link rel="stylesheet" href="/stylesheets/app.css">
@@ -34,22 +33,25 @@
 
   <header id='title'>
     <div class="row">
-      <div id="logo"><h1><a href="http://jsf.io/">Jared Fraser</a></h1></div>
-      <nav class="five columns">
-        <ul>
-          <li><a href="/">Blog</a></li>
-          <li><a href="/projects.html">Projects</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
+      <div class="twelve columns header-container">
+        <div class="six columns logo-container">
+          <div id="logo"><h1><a href="http://jsf.io/">modsognir</a></h1></div>
+        </div>
+        <nav class="six columns nav-container">
+          <ul>
+            <li><a href="/">Blog</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
-  
+
   <div class="row">
-  <div class="post ten columns offset-by-one">
+  <div class="post twelve columns">
     <div id="page-title"><h2>Princely 2.0 Roadmap</h2></div>
 
     <p class="datestamp">
@@ -59,18 +61,16 @@
       <p>The next planned set of non-bugfix work includes some big changes to the API, so we’re going to bump the version up to 2.0.0.</p>
 
 <ul>
-<li><code>Princely</code> class pdf generation responsibilities will be moved to <code>Princely::Pdf</code>. <code>Princely</code> will be changed to a module and used for global princely configuration.</li>
-
-<li><code>Princely::Pdf</code> will accept a template or html string (eg <code>Princely::Pdf.new(&#39;&lt;html&gt;&lt;/html&gt;&#39;).render</code>)</li>
-
-<li>HTML used for PDF generation will be accessible on the class.</li>
-
-<li><code>PdfHelper</code> will become <code>Princely::PdfHelper</code>.</li>
+  <li><code>Princely</code> class pdf generation responsibilities will be moved to <code>Princely::Pdf</code>. <code>Princely</code> will be changed to a module and used for global princely configuration.</li>
+  <li><code>Princely::Pdf</code> will accept a template or html string (eg <code>Princely::Pdf.new('&lt;html&gt;&lt;/html&gt;').render</code>)</li>
+  <li>HTML used for PDF generation will be accessible on the class.</li>
+  <li><code>PdfHelper</code> will become <code>Princely::PdfHelper</code>.</li>
 </ul>
 
-<p>I want to also keep developing the test suite. Some examples of unique behaviour that you’ve experienced would go a long way to bedding down a functional suite. Please <a href="mailto:princely@jsf.io">send me an email</a> or <a href="https://github.com/mbleigh/princely/pulls">open a pull request</a>.</p>
+<p>I want to also keep developing the test suite. Some examples of unique behaviour that you’ve experienced would go a long way to bedding down a functional suite. Please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#112;&#114;&#105;&#110;&#099;&#101;&#108;&#121;&#064;&#106;&#115;&#102;&#046;&#105;&#111;">send me an email</a> or <a href="https://github.com/mbleigh/princely/pulls">open a pull request</a>.</p>
 
 <p>Please leave a comment if you have any queries or concerns.</p>
+
     </div>
 
     <div id="disqus_thread"></div>
@@ -87,7 +87,7 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+
   </div>
 </div>
 

@@ -12,14 +12,13 @@
   <meta name="viewport" content="width=device-width" />
 
   <title>modsognir</title>
-  
-  <script type="text/javascript" src="http://use.typekit.net/nkw7hwr.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,300italic,400italic,500italic' rel='stylesheet' type='text/css'>
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
-  
+
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="/stylesheets/foundation.min.css">
   <link rel="stylesheet" href="/stylesheets/app.css">
@@ -34,22 +33,25 @@
 
   <header id='title'>
     <div class="row">
-      <div id="logo"><h1><a href="http://jsf.io/">Jared Fraser</a></h1></div>
-      <nav class="five columns">
-        <ul>
-          <li><a href="/">Blog</a></li>
-          <li><a href="/projects.html">Projects</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
+      <div class="twelve columns header-container">
+        <div class="six columns logo-container">
+          <div id="logo"><h1><a href="http://jsf.io/">modsognir</a></h1></div>
+        </div>
+        <nav class="six columns nav-container">
+          <ul>
+            <li><a href="/">Blog</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
-  
+
   <div class="row">
-  <div class="post ten columns offset-by-one">
+  <div class="post twelve columns">
     <div id="page-title"><h2>Migrating Legacy Users with Devise</h2></div>
 
     <p class="datestamp">
@@ -59,13 +61,20 @@
       <p>I’m currently working to replace an older legacy app with a Rails 3 app using Devise for authentication. One of the problems we encountered was was that the legacy app was using a non-standard approach for generating and encrypting passwords, so to migrate over user accounts, Devise’s built-in encryption strategies were completely useless. Fortunately, it turns out in Devise it is incredibly easy to build your own encryptor.</p>
 
 <p>Basically, all you have to do is create an file in config/initializers like the following:</p>
-<script src='https://gist.github.com/631880.js?file=modsognir.rb'><![CDATA[ ]]></script>
+
+<script src="https://gist.github.com/631880.js?file=modsognir.rb"> </script>
+
 <p>Then, in your config/initializers/devise.rb, its as simple as adding (or editing) a line that references the class you created.</p>
-<script src='https://gist.github.com/631880.js?file=devise.rb'><![CDATA[ ]]></script>
+
+<script src="https://gist.github.com/631880.js?file=devise.rb"> </script>
+
 <p>As long as your encryptor returned the encrypted version of your password, you’re good to go.</p>
 
 <p>Now migrating your accounts should be fairly straightforward. We were using restful auth in the legacy app, so I just mapped the important differences and then converted the passwords (being sure to save with false, in order to bypass devise validations)</p>
-<script src='https://gist.github.com/631880.js?file=irb'><![CDATA[ ]]></script>
+
+<script src="https://gist.github.com/631880.js?file=irb"> </script>
+
+
     </div>
 
     <div id="disqus_thread"></div>
@@ -82,7 +91,7 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+
   </div>
 </div>
 

@@ -1,0 +1,9 @@
+abc ᛋᚩᚷ
+def ᚻᚨᚱᚱ
+ghi ᛗᚩᛞ
+jkl ᚾᛁᚱ
+mno ᛉᚨᚾ
+pqr ᚨᛏᚩᛋ
+stu ᛉᚩᚱ
+vwx ᚾᚩᚱ
+yz  ᚷᚨᚱ

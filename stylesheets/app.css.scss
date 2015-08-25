@@ -1,4 +1,4 @@
-/* -------------------------------------------------- 
+/* --------------------------------------------------
    Table of Contents
 -----------------------------------------------------
 :: Shared Styles
@@ -12,40 +12,50 @@
 ----------------------------------------- */
 
 body {
-  font-family: 'Adelle', sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
+  line-height: 32px;
+  p {
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
 
   header#title {
     width: 100%;
     color: #f5f5f5;
-    background-color: #550000;
+    background-color: #446060;
 
     -webkit-box-shadow: rgba(0,0,0,0.3) 0px 2px 2px -1px;
     -moz-box-shadow: rgba(0,0,0,0.3) 0px 2px 2px -1px;
     box-shadow: rgba(0,0,0,0.3) 0px 2px 2px -1px;
 
     h1, h2 {
-      font-family: 'Adelle', sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0px;
       padding: 8px;
       font-size: 40px;
+      font-weight: 300;
       a {
-        color: #aa4444;
+        color: #f5f5f5;
       }
     }
+    .header-container, .logo-container, .nav-container {
+      padding:0;
+    }
 
+    .header-container {
+      padding-left: 5px;
+    }
 
-    #logo { 
+    #logo {
       float: left;
       h1 {
         color: #f5f5f5;
-        text-align: center;
+        text-align: left;
       }
       width: 450px;
     }
 
     nav {
-      margin-left: 15px;
-
       ul {
         list-style: none;
         float: right;
@@ -54,10 +64,10 @@ body {
           display: inline-block;
           margin-right: 28px;
           a {
-            font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+            font-family: 'Roboto', sans-serif;
             font-weight: 600;
 
-            color: #cc9999;
+            color: #f5f5f5;
           }
         }
       }
@@ -67,7 +77,7 @@ body {
   header.article {
     margin-top: 35px;
     h1 {
-      font-family: 'Adelle', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-weight: 700;
       font-size: 40px;
       text-transform: uppercase;
@@ -77,34 +87,37 @@ body {
   }
 
   p.datestamp {
-    margin-top: 0px;
+    margin-top: -10px;
   }
 
   #page-title {
     h2 {
-      font-family: 'Adelle', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-size: 28px;
       margin-bottom: 8px;
       margin-top: 30px;
-      font-weight: bold;
+      font-weight: 400;
+      margin-bottom: 24px;
     }
   }
 
   div.content {
     h1, h2, h3, h4 {
-      font-family: 'Adelle', sans-serif;
-      font-weight: 200;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
       font-size: 26px;
       margin-top: 36px;
+      margin-bottom: 24px;
     }
     p, li { font-size: 17px; }
+    li { margin-left: 22px; }
     code {
       padding: 2px 4px;
       white-space: nowrap;
       background-color: #F7F7F9;
       border: 1px solid #E1E1E8;
     }
-    table.lines { 
+    table.lines {
       margin-bottom: 0px;
       border-radius: 0px;
       border: none;
@@ -116,13 +129,14 @@ body {
     margin-bottom: 30px;
     margin-left: 0px;
     h1, h2, h3, h4 {
-      font-family: 'Adelle', sans-serif;
-      font-weight: 200;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
       font-size: 26px;
-      margin-top: 36px;
+      margin-top: 42px;
+      margin-bottom: 24px;
     }
     h3 {
-      font-weight: 200;
+      font-weight: 300;
       font-size: 22px;
     }
     p.date {
@@ -136,4 +150,9 @@ body {
   #disqus_thread {
     margin-top: 50px;
   }
+}
+
+.gist {
+  margin-top: 36px;
+  margin-bottom: 36px;
 }

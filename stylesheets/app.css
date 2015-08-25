@@ -1,4 +1,4 @@
-/* -------------------------------------------------- 
+/* --------------------------------------------------
    Table of Contents
 -----------------------------------------------------
 :: Shared Styles
@@ -9,63 +9,74 @@
    Shared Styles
 ----------------------------------------- */
 body {
-  font-family: 'Adelle', sans-serif !important; }
+  font-family: 'Roboto', sans-serif !important;
+  line-height: 32px; }
+  body p {
+    line-height: 32px;
+    margin-bottom: 24px; }
   body header#title {
     width: 100%;
     color: #f5f5f5;
-    background-color: #550000;
+    background-color: #446060;
     -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px -1px;
     -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px -1px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px -1px; }
     body header#title h1, body header#title h2 {
-      font-family: 'Adelle', sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0px;
       padding: 8px;
-      font-size: 40px; }
+      font-size: 40px;
+      font-weight: 300; }
       body header#title h1 a, body header#title h2 a {
-        color: #aa4444; }
+        color: #f5f5f5; }
+    body header#title .header-container, body header#title .logo-container, body header#title .nav-container {
+      padding: 0; }
+    body header#title .header-container {
+      padding-left: 5px; }
     body header#title #logo {
       float: left;
       width: 450px; }
       body header#title #logo h1 {
         color: #f5f5f5;
-        text-align: center; }
-    body header#title nav {
-      margin-left: 15px; }
-      body header#title nav ul {
-        list-style: none;
-        float: right;
-        margin-top: 18px; }
-        body header#title nav ul li {
-          display: inline-block;
-          margin-right: 28px; }
-          body header#title nav ul li a {
-            font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-            font-weight: 600;
-            color: #cc9999; }
+        text-align: left; }
+    body header#title nav ul {
+      list-style: none;
+      float: right;
+      margin-top: 18px; }
+      body header#title nav ul li {
+        display: inline-block;
+        margin-right: 28px; }
+        body header#title nav ul li a {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 600;
+          color: #f5f5f5; }
   body header.article {
     margin-top: 35px;
     text-align: center; }
     body header.article h1 {
-      font-family: 'Adelle', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-weight: 700;
       font-size: 40px;
       text-transform: uppercase; }
   body p.datestamp {
-    margin-top: 0px; }
+    margin-top: -10px; }
   body #page-title h2 {
-    font-family: 'Adelle', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 28px;
     margin-bottom: 8px;
     margin-top: 30px;
-    font-weight: bold; }
+    font-weight: 400;
+    margin-bottom: 24px; }
   body div.content h1, body div.content h2, body div.content h3, body div.content h4 {
-    font-family: 'Adelle', sans-serif;
-    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     font-size: 26px;
-    margin-top: 36px; }
+    margin-top: 36px;
+    margin-bottom: 24px; }
   body div.content p, body div.content li {
     font-size: 17px; }
+  body div.content li {
+    margin-left: 22px; }
   body div.content code {
     padding: 2px 4px;
     white-space: nowrap;
@@ -80,12 +91,13 @@ body {
     margin-bottom: 30px;
     margin-left: 0px; }
     body .posts h1, body .posts h2, body .posts h3, body .posts h4 {
-      font-family: 'Adelle', sans-serif;
-      font-weight: 200;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
       font-size: 26px;
-      margin-top: 36px; }
+      margin-top: 42px;
+      margin-bottom: 24px; }
     body .posts h3 {
-      font-weight: 200;
+      font-weight: 300;
       font-size: 22px; }
     body .posts p.date {
       font-size: 18px;
@@ -95,3 +107,9 @@ body {
       font-size: 17px; }
   body #disqus_thread {
     margin-top: 50px; }
+
+.gist {
+  margin-top: 36px;
+  margin-bottom: 36px; }
+
+/*# sourceMappingURL=app.css.map */

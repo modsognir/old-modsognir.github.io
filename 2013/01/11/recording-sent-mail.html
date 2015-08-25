@@ -12,14 +12,13 @@
   <meta name="viewport" content="width=device-width" />
 
   <title>modsognir</title>
-  
-  <script type="text/javascript" src="http://use.typekit.net/nkw7hwr.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,300italic,400italic,500italic' rel='stylesheet' type='text/css'>
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
-  
+
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="/stylesheets/foundation.min.css">
   <link rel="stylesheet" href="/stylesheets/app.css">
@@ -34,22 +33,25 @@
 
   <header id='title'>
     <div class="row">
-      <div id="logo"><h1><a href="http://jsf.io/">Jared Fraser</a></h1></div>
-      <nav class="five columns">
-        <ul>
-          <li><a href="/">Blog</a></li>
-          <li><a href="/projects.html">Projects</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
+      <div class="twelve columns header-container">
+        <div class="six columns logo-container">
+          <div id="logo"><h1><a href="http://jsf.io/">modsognir</a></h1></div>
+        </div>
+        <nav class="six columns nav-container">
+          <ul>
+            <li><a href="/">Blog</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
-  
+
   <div class="row">
-  <div class="post ten columns offset-by-one">
+  <div class="post twelve columns">
     <div id="page-title"><h2>Recording Sent Mail with Observers</h2></div>
 
     <p class="datestamp">
@@ -57,16 +59,15 @@
     </p>
     <div class="content">
       <p>I’ve had scenarios before where the users of an application want access to mail sent out through the application. Fortunately, it’s easy to craft an Observer to store a quick copy of the mail object.</p>
-<script src='https://gist.github.com/628f5fcf67c411178309.js'><![CDATA[ ]]></script>
-<p>A few notes:</p>
 
-<ul>
-<li>It’s possible to just serialise the <code>message</code> object directly. Storing the attributes makes it easier to query the <code>Email</code> object.</li>
+<script src="https://gist.github.com/628f5fcf67c411178309.js"> </script>
 
-<li>Most of the fields on <code>message</code> (eg. <code>message.from</code>) act or display like arrays or strings, but are actually instances of classes like <code>Mail::AddressContainer</code>. They’ll respond to most array or string commands.</li>
+<p>A few notes:
+* It’s possible to just serialise the <code>message</code> object directly. Storing the attributes makes it easier to query the <code>Email</code> object.
+* Most of the fields on <code>message</code> (eg. <code>message.from</code>) act or display like arrays or strings, but are actually instances of classes like <code>Mail::AddressContainer</code>. They’ll respond to most array or string commands.
+* In multipart emails, <code>message.body</code> will not be sufficient to retreive the body. You might need to use <code>message.html_part</code> and <code>message.text_part</code>. <code>message.parts</code> will retrieve all parts (including eg. attachments), and is an instance of <code>Mail::PartsList</code>. It behaves like an array.</p>
 
-<li>In multipart emails, <code>message.body</code> will not be sufficient to retreive the body. You might need to use <code>message.html_part</code> and <code>message.text_part</code>. <code>message.parts</code> will retrieve all parts (including eg. attachments), and is an instance of <code>Mail::PartsList</code>. It behaves like an array.</li>
-</ul>
+
     </div>
 
     <div id="disqus_thread"></div>
@@ -83,7 +84,7 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+
   </div>
 </div>
 
