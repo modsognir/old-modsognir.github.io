@@ -60,12 +60,15 @@
     <div class="content">
       <p>I’ve been doing some work on Princely the last couple of weeks and i’m happy to announce the release of version 1.3.0. My goal was to clear up any outstanding issues and get Asset Pipeline support into Princely, as well as add test support.</p>
 
-<p>The following changes are included in this release:
-* Asset Pipeline support in Rails &gt;= 3.1
-* Decoupling the main Princely class from Rails for use in non-rails projects
-* Added option :disposition to <code>make_and_send_pdf</code> to allow PDFs to be sent as attachments or inline
-* Fixed invalid byte sequence error in UTF-8 with Ruby 1.9.3 (Gregory Becker)
-* Avoid re-registering the PDF Mimetype (causing warnings) (James Barona)</p>
+<p>The following changes are included in this release:</p>
+
+<ul>
+  <li>Asset Pipeline support in Rails &gt;= 3.1</li>
+  <li>Decoupling the main Princely class from Rails for use in non-rails projects</li>
+  <li>Added option :disposition to <code>make_and_send_pdf</code> to allow PDFs to be sent as attachments or inline</li>
+  <li>Fixed invalid byte sequence error in UTF-8 with Ruby 1.9.3 (Gregory Becker)</li>
+  <li>Avoid re-registering the PDF Mimetype (causing warnings) (James Barona)</li>
+</ul>
 
 <p>I’ve tested this release on a few applications I have access to, however if you run into any problems please <a href="https://github.com/mbleigh/princely/issues">lodge an issue</a>.</p>
 

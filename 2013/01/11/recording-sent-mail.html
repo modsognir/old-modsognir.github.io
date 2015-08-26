@@ -62,10 +62,13 @@
 
 <script src="https://gist.github.com/628f5fcf67c411178309.js"> </script>
 
-<p>A few notes:
-* It’s possible to just serialise the <code>message</code> object directly. Storing the attributes makes it easier to query the <code>Email</code> object.
-* Most of the fields on <code>message</code> (eg. <code>message.from</code>) act or display like arrays or strings, but are actually instances of classes like <code>Mail::AddressContainer</code>. They’ll respond to most array or string commands.
-* In multipart emails, <code>message.body</code> will not be sufficient to retreive the body. You might need to use <code>message.html_part</code> and <code>message.text_part</code>. <code>message.parts</code> will retrieve all parts (including eg. attachments), and is an instance of <code>Mail::PartsList</code>. It behaves like an array.</p>
+<p>A few notes:</p>
+
+<ul>
+  <li>It’s possible to just serialise the <code>message</code> object directly. Storing the attributes makes it easier to query the <code>Email</code> object.</li>
+  <li>Most of the fields on <code>message</code> (eg. <code>message.from</code>) act or display like arrays or strings, but are actually instances of classes like <code>Mail::AddressContainer</code>. They’ll respond to most array or string commands.</li>
+  <li>In multipart emails, <code>message.body</code> will not be sufficient to retreive the body. You might need to use <code>message.html_part</code> and <code>message.text_part</code>. <code>message.parts</code> will retrieve all parts (including eg. attachments), and is an instance of <code>Mail::PartsList</code>. It behaves like an array.</li>
+</ul>
 
 
     </div>
