@@ -89,7 +89,8 @@ body {
     background-color: #f7f7f9 !important; }
   body .posts {
     margin-bottom: 30px;
-    margin-left: 0px; }
+    margin-left: 0px;
+    padding-left: 0; }
     body .posts h1, body .posts h2, body .posts h3, body .posts h4 {
       font-family: 'Roboto', sans-serif;
       font-weight: 300;
