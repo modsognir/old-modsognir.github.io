@@ -90,8 +90,7 @@ body {
   body .posts {
     margin-bottom: 30px;
     margin-left: 0px;
-    padding-left: 0;
-    margin-top: 24px; }
+    padding-left: 0; }
     body .posts h1, body .posts h2, body .posts h3, body .posts h4 {
       font-family: 'Roboto', sans-serif;
       font-weight: 300;
@@ -101,6 +100,9 @@ body {
     body .posts h3 {
       font-weight: 300;
       font-size: 22px; }
+    body .posts li {
+      margin-left: 22px;
+      font-size: 17px; }
     body .posts p.date {
       font-size: 18px;
       color: #666;
